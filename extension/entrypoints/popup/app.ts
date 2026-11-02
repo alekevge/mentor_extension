@@ -1,11 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    host: { class: 'block p-4' },
+    imports: [RouterOutlet],
+    host: { class: 'block p-4', style: 'width:300px; height:300px' },
     template: `                                                                         
-      <h1 class="text-lg font-bold">Hello from Angular!</h1>                            
+     
+         
+      <router-outlet></router-outlet>                 
     `,
 })
 export class App { }  

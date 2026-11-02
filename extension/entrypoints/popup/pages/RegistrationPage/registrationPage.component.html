@@ -1,0 +1,32 @@
+      <div class="header">
+            <h1 class="text-lg font-bold">Регистрация нового пользователя</h1>           
+      </div>
+ 
+
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+            <label for="login">
+                  <strong>Логин нового пользователя:</strong>
+            </label>
+            <input id="login" type="text"  formControlName="login" />
+
+            
+
+            <label for="password">
+                  <strong>Пароль:</strong>
+            </label>
+            <input id="password" type="password"  formControlName="password" />
+
+            <label for="name">
+                  <strong>Имя:</strong>
+            </label>
+            <input id="name" type="text"  formControlName="name" />
+
+            <label for="surname">
+                  <strong>Фамилия:</strong>
+            </label>
+            <input id="surname" type="text"  formControlName="surname" />
+
+
+            <button type="submit" >Создать</button>
+      </form>
